@@ -22,3 +22,20 @@ class Products(db.Model):
     def to_json(self):
         return {c.key: getattr(self, c.key)
                 for c in inspect(self).mapper.column_attrs}
+
+class Workers(db.Model):
+    __tablename__ = 'empleados'
+    id_empleado = db.Column(db.Integer, primary_key=True)
+    nombres = db.Column(db.String, unique=True, nullable=False)
+    apellidos = db.Column(db.String, unique=True, nullable=False)
+    puesto = db.Column(db.String, unique=True, nullable=False)
+
+    def __init__(self, nombres, apellidos, puesto):
+        self.nombres = nombres
+        self.apellidos = apellidos
+        self.puesto = puesto
+
+    
+    def to_json(self):
+        return {c.key: getattr(self, c.key)
+                for c in inspect(self).mapper.column_attrs}

@@ -60,3 +60,5 @@ class ProductController(Resource):
             db.session.delete(product)
             db.session.commit()
             return {"Producto": product_schema.dump(product),"mensaje":"Eliminado"}
+
+
