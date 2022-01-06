@@ -6,7 +6,7 @@ autopep8==1.4.3
 backcall==0.1.0
 billiard==3.6.0.0
 blinker==1.4
-celery==4.3.0
+celery==5.2.2
 certifi==2019.9.11
 cffi==1.11.2
 chardet==3.0.4
